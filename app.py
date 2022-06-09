@@ -2,7 +2,6 @@ import flask
 import os
 import json
 from flask import Flask, request, jsonify, render_template, redirect, url_for, send_from_directory
-from azure.servicebus import ServiceBusClient, ServiceBusMessage
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
