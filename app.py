@@ -1,12 +1,10 @@
-import os
+import flask
 import json
-from servicebus import p_queue
 from flask import Flask, request, jsonify, render_template, redirect, url_for, send_from_directory
 
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
-
 
 @app.route('/')
 def index():
