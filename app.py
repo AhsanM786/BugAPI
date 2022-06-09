@@ -14,8 +14,9 @@ def index():
 	"team" : "pearl",
         "title" : "test"
     })
-    ENDPOINT=os.environ['ENDPOINT']
-    with ServiceBusClient.from_connection_string(ENDPOINT) as client:
+    
+    endpoint=os.environ['ENDPOINT']
+    with ServiceBusClient.from_connection_string(endpoint) as client:
         with client.get_queue_sender(queue_name="priorityqueue") as sender:
             message = ServiceBusMessage(msg)
             sender.send_messages(message)
