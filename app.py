@@ -5,11 +5,12 @@ from azure.servicebus import ServiceBusClient, ServiceBusMessage
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
+CONNECTION_STR = os.environ['ENDPOINT']
+PRIO_QUEUE_NAME = "priorityqueue"
 
 @app.route('/')
 def index():
-    CONNECTION_STR = "Endpoint=sb://jcbugsystem.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=RnKgBHavWXnydS3wUygMQaBT/b7/bXDTWFEjtd5P2zY="
-    PRIO_QUEUE_NAME = "priorityqueue"
+    
     msg = json.dumps({
 	"severity": "black",
 	"triage": "asdasdasda aSF ASFG ADEG  gqweg gq1 13 41 fa n 133r ",
