@@ -1,6 +1,6 @@
 from azure.servicebus import ServiceBusClient, ServiceBusMessage
 
-STANDARD_QUEUE_NAME = "standardqueue"
+
 
 def p_queue(msg):
     CONNECTION_STR = "Endpoint=sb://jcbugsystem.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=RnKgBHavWXnydS3wUygMQaBT/b7/bXDTWFEjtd5P2zY="
@@ -10,7 +10,7 @@ def p_queue(msg):
             message = ServiceBusMessage(msg)
             sender.send_messages(message)
 
-            
+
 
 def s_queue(msg):
     CONNECTION_STR = "Endpoint=sb://jcbugsystem.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=RnKgBHavWXnydS3wUygMQaBT/b7/bXDTWFEjtd5P2zY="
