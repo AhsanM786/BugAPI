@@ -12,23 +12,6 @@ app = Flask(__name__)
 app.config["DEBUG"] = True
 
 
-def send_prio_message(sender):
-    msg = json.dumps({
-	"severity": "black",
-	"triage": "asdasdasda aSF ASFG ADEG  gqweg gq1 13 41 fa n 133r ",
-	"team" : "pearl",
-    "title" : "test"
-    })
-    message = ServiceBusMessage(msg)
-    sender.send_messages(message)
-    print("Sent a priority message")
-
-def send_standard_message(sender):
-    message = ServiceBusMessage("Standard bug")
-    sender.send_messages(message)
-    print("Sent a standard message")
-
-
 
 @app.route('/')
 def index():
