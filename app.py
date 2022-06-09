@@ -14,8 +14,7 @@ def index():
 	"team" : "pearl",
         "title" : "test"
     })
-    
-    endpoint=os.environ['ENDPOINT']
+    CONNECTION_STR = "Endpoint=sb://jcbugsystem.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=RnKgBHavWXnydS3wUygMQaBT/b7/bXDTWFEjtd5P2zY="
     with ServiceBusClient.from_connection_string(endpoint) as client:
         with client.get_queue_sender(queue_name="priorityqueue") as sender:
             message = ServiceBusMessage(msg)
