@@ -10,10 +10,5 @@ app.config["DEBUG"] = True
 def index():
     return render_template('index.html')
 
-@app.route("/detect", methods=['POST'])
-def detect():
-    return 'OK
-
-
 if __name__ == '__main__':
    app.run()
