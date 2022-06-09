@@ -62,4 +62,4 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D444B5BD02EE4657937E0797172DB14A }}
         env:
-          endpoint: ${{ secrets.ENDPOINT}}
+          ENDPOINT: ${{ secrets.ENDPOINT}}
