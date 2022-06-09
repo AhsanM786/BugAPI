@@ -7,7 +7,6 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for, s
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
-testdata = {"severity": "black","triage": "asdasdasda aSF ASFG ADEG  gqweg gq1 13 41 fa n 133r ","team" : "pearl","title" : "test"}
 
 @app.route('/')
 def index():
